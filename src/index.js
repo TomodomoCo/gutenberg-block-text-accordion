@@ -24,7 +24,7 @@ registerBlockType('tomodomo/block-text-accordion', {
   icon: {
     background: '#963f69',
     foreground: '#FFFFFF',
-    src: 'index-card',
+    src: 'sort',
   },
   category: 'widgets',
   attributes: {
