@@ -1,0 +1,63 @@
+/**
+ * Accordion is closed by default
+ */
+.td-accordion {
+  margin: 1em 0;
+
+  .td-accordion__header {
+    position: relative;
+    padding: 0 4em 0 1em;
+
+    border: 1px solid #DDD;
+    background: #FAFAFA;
+    cursor: pointer;
+
+    p {
+      margin: 1em 0;
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      margin-top: -5px;
+
+      content: ' ';
+      width: 0px;
+      height: 0px;
+
+      border: 10px solid transparent;
+
+      // Arrow pointing down
+      border-top: 10px solid black;
+      border-bottom: 0;
+    }
+
+  }
+
+  .td-accordion__content {
+    // Closed by default
+    display: none;
+
+    border: 1px solid #DDD;
+    margin-top: -1px;
+    padding: 0 1em;
+  }
+}
+
+  /**
+   * Style the open accordion
+   */
+  .td-accordion.td-accordion--open {
+    .td-accordion__header {
+      &:after {
+        // Arrow pointing up
+        border-top: 0;
+        border-bottom: 10px solid black;
+      }
+    }
+
+    .td-accordion__content {
+      display: block;
+    }
+  }
