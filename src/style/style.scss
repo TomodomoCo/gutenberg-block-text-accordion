@@ -1,3 +1,6 @@
+$arrow-width: 10px; // An even number is best
+$arrow-color: black;
+
 /**
  * Accordion is closed by default
  */
@@ -20,16 +23,16 @@
       position: absolute;
       top: 50%;
       right: 1em;
-      margin-top: -5px;
+      margin-top: $arrow-width * -0.5;
 
       content: ' ';
       width: 0px;
       height: 0px;
 
-      border: 10px solid transparent;
+      border: $arrow-width solid transparent;
 
       // Arrow pointing down
-      border-top: 10px solid black;
+      border-top: $arrow-width solid $arrow-color;
       border-bottom: 0;
     }
 
@@ -53,7 +56,7 @@
       &:after {
         // Arrow pointing up
         border-top: 0;
-        border-bottom: 10px solid black;
+        border-bottom: $arrow-width solid $arrow-color;
       }
     }
 
