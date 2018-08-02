@@ -12,6 +12,9 @@
   "config": {
     "sort-packages": true
   },
+  "extra": {
+    "installer-name": "tomodomo-block-text-accordion"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
